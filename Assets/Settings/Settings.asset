@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ff93fa2282044508a0e4da85026ec37, type: 3}
+  m_Name: Settings
+  m_EditorClassIdentifier: Assembly-CSharp::Settings
+  baseRadius: 0.5
+  amplitude: 1
+  frequency: 0.4
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.006576538
+      value: 0.0019226074
+      inSlope: 0.050872065
+      outSlope: 0.050872065
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.20792082
+    - serializedVersion: 3
+      time: 0.50268644
+      value: 0.99967736
+      inSlope: -0.042415984
+      outSlope: -0.042415984
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.0031129
+      value: 0.0009573698
+      inSlope: 0.10929568
+      outSlope: 0.10929568
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.1056145
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  zoneMove: 1
+  accumulationRate: 1
