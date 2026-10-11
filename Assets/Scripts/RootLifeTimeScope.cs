@@ -25,8 +25,10 @@ public class RootLifeTimeScope: LifetimeScope
         builder.RegisterInstance(zoneView).As<IZoneView>();
 
         builder.RegisterComponent(ui);
-        builder.RegisterInstance(settings);
         builder.RegisterInstance(gridSettings);
+        builder.RegisterInstance(settings)
+            .As<IRadiusOscillatorSettings>()
+            .As<IZoneMotionSettings>();
 
         builder.Register<MeshPresenter>(Lifetime.Singleton);
         builder.Register<ZonePresenter>(Lifetime.Singleton);

@@ -16,7 +16,7 @@ namespace SphereZone
         private float _time;
         private float _stepAccumulationDelta;
 
-        private Settings _settings;
+        private readonly IZoneMotionSettings _settings;
 
         // Кэшированный делегат: создаётся один раз в конструкторе
         private readonly TrajectoryStepper.StepHandler _onTrajectoryStep;
@@ -28,7 +28,7 @@ namespace SphereZone
             MaterialAccumulator accumulator,
             IZoneInput input,
             HeightMapData heightMap,
-            Settings settings)
+            IZoneMotionSettings settings)
         {
             _settings = settings;
             _zone = zone;
@@ -55,7 +55,7 @@ namespace SphereZone
             if (_input.IsAccumulating)
             {
                 //Не перемещаю зону сразу, а по шагам между начальной и конечной точкой.
-                _stepAccumulationDelta = _settings.accumulationRate * deltaTime;
+                _stepAccumulationDelta = _settings.AccumulationRate * deltaTime;
                 
                 // Шаг не длиннее половины текущего радиуса
                 var maxStep = Mathf.Max(_zone.CurrentRadius * 0.5f, 0.01f);
@@ -70,7 +70,7 @@ namespace SphereZone
         private Vector3 Move(Vector3 current, float deltaTime)
         {
             var direction = _input.GetMoveDirection();
-            var delta = new Vector3(direction.x, 0f, direction.y) * (_settings.zoneMove * deltaTime);
+            var delta = new Vector3(direction.x, 0f, direction.y) * (_settings.ZoneMove * deltaTime);
             var next = current + delta;
 
             next.x = Mathf.Clamp(next.x, 0f, _heightMap.Width);

@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Settings
   baseRadius: 0.5
   amplitude: 1
-  frequency: 0.4
+  frequency: 0.7
   curve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.006576538
-      value: 0.0019226074
+      time: 0.0032548755
+      value: 0.005733609
       inSlope: 0.050872065
       outSlope: 0.050872065
       tangentMode: 0
@@ -28,13 +28,22 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.20792082
     - serializedVersion: 3
-      time: 0.50268644
+      time: 0.46283048
       value: 0.99967736
-      inSlope: -0.042415984
-      outSlope: -0.042415984
+      inSlope: -12.860164
+      outSlope: -12.860164
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
+      outWeight: 0.02983855
+    - serializedVersion: 3
+      time: 0.8689548
+      value: 0.71603036
+      inSlope: 0.577728
+      outSlope: 0.577728
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.9538028
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 1.0031129
@@ -48,5 +57,5 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  zoneMove: 1
-  accumulationRate: 1
+  zoneMove: 10
+  accumulationRate: 10
