@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Grid
 {
-    public sealed class HeightMapData
+    public sealed class HeightMapData: ISurfaceReset
     {
         public int ResolutionX { get; }
         public int ResolutionZ { get; }
@@ -76,5 +76,4 @@ namespace Grid
             return region;
         }
     }
-
 }

@@ -35,6 +35,7 @@ public class RootLifeTimeScope: LifetimeScope
         
         builder.Register<HeightMapData>(Lifetime.Singleton).AsSelf();
         builder.Register<AccumulationZone>(Lifetime.Singleton);
+        builder.Register<HeightMapData>(Lifetime.Singleton).AsSelf().As<ISurfaceReset>();
         builder.Register<RadiusOscillator>(Lifetime.Singleton);
         builder.Register<MaterialAccumulator>(Lifetime.Singleton);
         builder.Register<TrajectoryStepper>(Lifetime.Singleton);

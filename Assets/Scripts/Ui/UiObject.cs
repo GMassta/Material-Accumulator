@@ -11,7 +11,7 @@ namespace DefaultNamespace.Ui
         private UIDocument _document;
         private VisualElement _panel;
         
-        [Inject] HeightMapData _heightMap;
+        [Inject] ISurfaceReset _surfaceReset;
 
         private void Awake()
         {
@@ -46,7 +46,7 @@ namespace DefaultNamespace.Ui
                     color = Color.white }
             });
 
-            _panel.Add(new Button( () => _heightMap.Reset())
+            _panel.Add(new Button( () => _surfaceReset.Reset())
             {
                 text = "Reset Area",
             });
