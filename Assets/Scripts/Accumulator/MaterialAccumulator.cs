@@ -14,7 +14,7 @@ namespace Accumulator
         }
 
         //Поднимает высоту во всех узлах сетки в пределах zone на delta
-        public void Accumulate(AccumulationZone zone, float delta)
+        public void Accumulate(IAccumulationZone zone, float delta)
         {
             zone.GetWorldBounds(out var minX, out var maxX, out var minZ, out var maxZ);
 

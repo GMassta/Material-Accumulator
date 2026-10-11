@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace SphereZone
 {
-    public sealed class AccumulationZone
+    public sealed class AccumulationZone: IAccumulationZone
     {
         public Vector3 Position { get; private set; }
         public float CurrentRadius { get; private set; }
